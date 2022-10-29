@@ -36,4 +36,4 @@ jobs:
         run: cd test-repo/lambda && zip -qq -r lambda.zip .
 
       - name: List directory
-        run: ls 
+        run: cd test-repo/lambda && ls
