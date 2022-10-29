@@ -18,20 +18,24 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v3
 
+      - name: Ensure docs directory
+        run: mkdir test-repo
+
       - name: Checkout code repository
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           repository:  getir-dev/david-igbinedion-serverless-application
           token: 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 #should be stored as a secret but I don't have admin access to do so
-          path: test-repo
+          path: test-repo/lambda
+          ref: main
 
       - name: List directory
-        run: pwd
+        run: cd
 
       - name: Zip code
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r david-igbinedion-serverless-application.zip david-igbinedion-serverless-application
+          args: zip -qq -r test-repo.zip test-repo/lambda
 
       - name: List directory
         run: ls 
