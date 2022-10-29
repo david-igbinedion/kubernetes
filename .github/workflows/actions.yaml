@@ -34,10 +34,10 @@ jobs:
         run: ls
 
       - name: List directory
-        run: cd serverless/test-repo/lambda && ls
+        run: cd test-repo && ls
 
-      - name: Zip code
-        run: cd serverless/test-repo/lambda && zip -qq -r lambda.zip .
+     # - name: Zip code
+     #   run: cd serverless/test-repo/lambda && zip -qq -r lambda.zip .
 
-      - name: List directory
-        run: cd serverless/test-repo/lambda && ls
+     # - name: List directory
+     #   run: cd serverless/test-repo/lambda && ls
