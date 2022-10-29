@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository:  getir-dev/david-igbinedion-serverless-application
-          token: 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 #should be stored as a secret but I don't have admin access to do so
+          token: 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 #should be stored as a secret but I don't have admin access to do so
 
       - name: List directory
         run: ls
