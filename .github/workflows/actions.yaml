@@ -35,7 +35,7 @@ jobs:
       - name: Zip code
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r lambda.zip .
+          args: cd test-repo/lambda && zip -qq -r lambda.zip .
 
       - name: List directory
         run: ls 
