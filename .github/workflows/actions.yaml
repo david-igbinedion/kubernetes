@@ -26,7 +26,7 @@ jobs:
           path: test-repo
 
       - name: List directory
-        run: ls
+        run: pwd
 
       - name: Zip code
         uses: montudor/action-zip@v1
