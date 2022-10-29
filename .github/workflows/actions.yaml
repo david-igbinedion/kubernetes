@@ -23,6 +23,7 @@ jobs:
         with:
           repository:  getir-dev/david-igbinedion-serverless-application
           token: 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 #should be stored as a secret but I don't have admin access to do so
+          path: test-repo
 
       - name: List directory
         run: ls
