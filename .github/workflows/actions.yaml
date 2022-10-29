@@ -13,7 +13,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: serverless
+
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
@@ -30,7 +30,7 @@ jobs:
           ref: main
 
       - name: List directory
-        run: cd
+        run: ls
 
       - name: Zip code
         uses: montudor/action-zip@v1
