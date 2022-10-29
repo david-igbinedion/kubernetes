@@ -13,6 +13,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: serverless
 
     steps:
       - name: Git checkout
@@ -28,6 +29,9 @@ jobs:
           token: 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 #should be stored as a secret but I don't have admin access to do so
           path: test-repo/lambda
           ref: main
+
+      - name: List directory
+        run: ls
 
       - name: List directory
         run: cd test-repo/lambda && ls
